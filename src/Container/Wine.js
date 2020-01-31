@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import Header from '../Components/Toolbar/Header';
-import LandingPage from '../Components/Home/LandingPage';
-import SearchPage from './SearchPage';
+import React from 'react';
+import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from '../Pages/Home/Home'
+import Classic from '../Components/Classic';
 
 
-class Wine extends Component {
-    render(){
-        return(
-            <div>
-                <Header />
-                <LandingPage />
-                <SearchPage />
-            </div>
-        )
-    }
+
+const Wine = () => {
+    return(
+        <div>
+            <Header />
+            <Home />
+            <Classic />
+        </div>
+    )
 };
 export default Wine;
