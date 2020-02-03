@@ -3,6 +3,7 @@ import Header from './Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from '../Pages/Home/Home'
 import Classic from '../Components/Classic';
+import Footer from './Footer';
 
 
 
@@ -12,6 +13,7 @@ const Wine = () => {
             <Header />
             <Home />
             <Classic />
+            <Footer />
         </div>
     )
 };
