@@ -1,7 +1,7 @@
 import React from 'react';
 import MailIcon from '@material-ui/icons/Mail';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import '../Pages/Home/App.css';
+import '../Pages/App.css';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 

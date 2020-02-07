@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from '../Pages/Home/Home'
-import Classic from '../Components/Classic';
+import Home from '../Pages/Home'
 import Footer from './Footer';
+import Search from '../Pages/Search';
+import Alcoholic from '../Pages/Alcoholic';
 
 
 
@@ -12,8 +13,10 @@ const Wine = () => {
         <div>
             <Header />
             <Home />
-            <Classic />
+            <Search />
+            <Alcoholic />
             <Footer />
+            
         </div>
     )
 };
