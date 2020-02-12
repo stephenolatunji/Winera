@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Search from './Search';
 import './App.css';
-import { Divider } from 'semantic-ui-react';
+
 
 class Home extends Component{
     constructor() {
@@ -24,9 +25,9 @@ class Home extends Component{
     render(){
         return (
             <div className='container-fluid'>
-                <div className='card w-50'>
+                <div className='card' id='video'>
                     <div className="embed-responsive embed-responsive-4by3">
-                        <iframe className='embed-responsive-item' width="340" height="200" src="https://www.youtube.com/embed/ic-tqu49UnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                        <iframe className='embed-responsive-item' width="340" height="100" src="https://www.youtube.com/embed/ic-tqu49UnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
                     </div>
                 </div>
                 <section id='history' className=''>
@@ -59,9 +60,9 @@ class Home extends Component{
                             {this.state.results.map((drinks, i) => {
                                 return (
                                     <div className='col-sm-4' >
-                                        <div className='card' key={i}>
+                                        <div className='card' id='margarita' key={i}>
                                             <img src={drinks.strDrinkThumb} alt='cocktail' />
-                                            <h3>{drinks.strDrink}</h3>
+                                            <h5>{drinks.strDrink}</h5>
                                             <p>{drinks.strIngredient1}, {drinks.strIngredient2}, {drinks.strIngredient3}, {drinks.strIngredient4}</p>
                                         </div>
                                     </div>
@@ -69,9 +70,8 @@ class Home extends Component{
                             })}
                         </div>
                     </div>
-                    <Divider />
                 </section>
-                
+                <Search />
             </div>
         )
     }

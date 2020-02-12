@@ -1,7 +1,5 @@
 .container-fluid{
-    margin-top: 60px;
-    /* background-color: rgb(240, 225, 210); */
-    padding: 30px 0;
+    margin-top: 65px;
 }
 
 .card {
@@ -23,8 +21,19 @@
     /* color: white; */
 }
 
-.search-path{
-    background-color: rgba(49, 223, 223, 0.842);
+#margarita{
+    margin-bottom: 100px;
+    height: 200px;
+    width: 200px;
+    
+}
+#margarita > img {
+    height:100% ;
+    width: 100%;
+}
+
+.search-section{
+    /* background-color: rgba(49, 223, 223, 0.842); */
     padding: 20px;
 
 }
@@ -60,4 +69,16 @@
     margin-left: 5px;
     margin-right: 5px;
     border-left: 2px solid red;
+}
+#alcohol > img {
+    margin: 5px;
+    padding: 4px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+#video{
+    height: 400px;
+    width: 100%;
+    /* margin-top: 65px; */
 }

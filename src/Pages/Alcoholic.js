@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class Alcoholic extends Component {
     constructor(){
@@ -26,9 +27,9 @@ class Alcoholic extends Component {
                 {this.state.results.map((drinks, i) => {
                     return(
                         
-                            <div className='col-sm-3' key={i}>
+                            <div className='col-sm-3' id='alcohol' key={i}>
                                 <img src={drinks.strDrinkThumb} alt='Alcohol' />
-                                <h3>{drinks.strDrink}</h3>
+                                <h5>{drinks.strDrink}</h5>
                             </div>
                         
                     )

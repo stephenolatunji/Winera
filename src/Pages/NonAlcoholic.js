@@ -18,19 +18,16 @@ class NonAlcoholic extends Component {
 
 
 
-
     render() {
         return (
             <div className='container'>
                 <div className='row' >
                     {this.state.results.map((drinks, i) => {
                         return (
-
-                            <div className='col-sm-3' key={i}>
+                            <div className='col-sm-3' key={i} id='alcohol'>
                                 <img src={drinks.strDrinkThumb} alt='NonAlcoholic Drinks' />
                                 <h3>{drinks.strDrink}</h3>
                             </div>
-
                         )
                     })}
                 </div>

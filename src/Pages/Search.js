@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './App.css';
 
 
 class Search extends Component {
@@ -42,7 +44,7 @@ class Search extends Component {
     render(){
         return (
             <div>
-                <section className='search-path'>
+                <section className='search-section'>
                     <div className='search-area'>
                         <h3>Search from our collection</h3>
                         <form inline onSubmit={this.submitHandler}>
@@ -51,27 +53,40 @@ class Search extends Component {
                         </form>
                         <h5>Search By Category</h5>
                         <ul>
-                            <li>Alcoholic</li>
-                            <li>Non Alcoholic</li>
-                            <li>Cocktail</li>
-                            <li>Ordinary Drinks</li>
-                            <li>Vodka</li>
-                            <li>Gin</li>
+                            <li>
+                                <Link to='/alcoholic'>Alcoholic</Link>
+                            </li>
+                            <li>
+                                <Link to='/nonalcoholic'>Non Alcoholic</Link>
+                            </li>
+                            <li>
+                                <Link to='/cocktail'>Cocktail</Link>
+                            </li>
+                            <li>
+                                <Link to='/ordinarydrink'>Ordinary Drinks</Link>
+                            </li>
+                            <li>
+                                <Link to='/vodka'>Vodka</Link>
+                            </li>
+                            <li>
+                                <Link to='/gin'>Gin</Link>
+                            </li>
                         </ul>
                     </div>
                 </section>
-                <div>
-                    {this.state.results.map((drinks, i) => {
-                        return (
-                            <div className='' key={i}>
-                                <img src={drinks.strDrinkThumb} alt='cocktail' />
-                                <h3>{drinks.strDrink}</h3>
-                                <p>{drinks.strIngredient1}, {drinks.strIngredient2}, {drinks.strIngredient3}, {drinks.strIngredient4}</p>
-                            </div>
-                        )
-                    })}
+                <div className='container'>
+                    <div className='row'>
+                        {this.state.results.map((drinks, i) => {
+                            return (
+                                <div className='col-sm-3' key={i} id='alcohol'>
+                                    <img src={drinks.strDrinkThumb} alt='cocktail' />
+                                    <h3>{drinks.strDrink}</h3>
+                                    <p>{drinks.strIngredient1}, {drinks.strIngredient2}, {drinks.strIngredient3}, {drinks.strIngredient4}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
-                
             </div>
         )
     }

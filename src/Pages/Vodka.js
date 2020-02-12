@@ -12,12 +12,9 @@ class Vodka extends Component {
         fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')
             .then(res => res.json())
             .then(data => {
-                this.setState({ results: data.drinks.slice(50, 70) })
+                this.setState({ results: data.drinks.slice(0, 30) })
             })
     }
-
-
-
 
     render() {
         return (
@@ -26,7 +23,7 @@ class Vodka extends Component {
                     {this.state.results.map((drinks, i) => {
                         return (
 
-                            <div className='col-sm-3' key={i}>
+                            <div className='col-sm-3' key={i} id='alcohol'>
                                 <img src={drinks.strDrinkThumb} alt='Alcohol' />
                                 <h3>{drinks.strDrink}</h3>
                             </div>
